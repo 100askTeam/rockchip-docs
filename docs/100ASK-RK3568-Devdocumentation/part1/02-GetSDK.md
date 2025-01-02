@@ -22,7 +22,7 @@ sudo apt update
 安装依赖：
 
 ~~~bash
-sudo apt-get install curl python2.7 git ssh make gcc libssl-dev liblz4-tool expect \
+sudo apt-get install curl python2 git ssh make gcc libssl-dev liblz4-tool expect \
 g++ patchelf chrpath gawk texinfo chrpath diffstat binfmt-support qemu-user-static live-build bison \
 flex fakeroot cmake gcc-multilib g++-multilib unzip device-tree-compiler python3-pip \
 libncurses-dev python3-pyelftools vim mtd-utils
@@ -53,7 +53,7 @@ cd rockchip-sdk/
 git clone https://e.coding.net/weidongshan/dshanpi-r1/external.git
 git clone https://e.coding.net/weidongshan/dshanpi-r1/kernel.git
 git clone https://e.coding.net/weidongshan/dshanpi-r1/u-boot.git
-git cloen https://e.coding.net/weidongshan/dshanpi-r1/buildroot.git
+git clone https://e.coding.net/weidongshan/dshanpi-r1/buildroot.git
 ~~~
 
 SDK稍微有点大，需要等待一会时间。
@@ -90,9 +90,9 @@ SDK稍微有点大，需要等待一会时间。
 
 ~~~bash
 cd ~/
-git clone https://github.com/DongshanPI/RK3568-DshanPI-R1_SDK.git
+git clone https://e.coding.net/weidongshan/dshanpi-r1/RK3568-DshanPI-R1_SDK.git
 cd RK3568-DshanPI-R1_SDK
 cp ./* -rfvd ~/rockchip-sdk/
 ~~~
 
-这里需要注意 rockchip-sdk 路径的位置。
+复制的时候，这里需要注意 rockchip-sdk 路径的位置。
