@@ -11,30 +11,27 @@ sidebar_position: 3
 ./build.sh lunch
 ~~~
 
-选择 `BoardConfig-rk3568-100ask-ddr4.mk`
+选择 `100ask_rk3568_defconfig`
 
 ~~~bash
-ubuntu@ubuntu2004:~/100ask-RK3568-SDK/rk3568_4.19_v1.3.2$ ./build.sh lunch
-processing option: lunch
+ubuntu@ubuntu2004:~/rk3568_linux5.10_sdk$ ./build.sh lunch
+Pick a defconfig:
 
-You're building on Linux
-Lunch menu...pick a combo:
-
-0. default BoardConfig.mk
-1. BoardConfig-ab-base.mk
-2. BoardConfig-rk3566-evb2-lp4x-v10-32bit.mk
-3. BoardConfig-rk3566-evb2-lp4x-v10.mk
-4. BoardConfig-rk3568-100ask-ddr4.mk
-5. BoardConfig-rk3568-evb1-ddr4-v10-32bit.mk
-6. BoardConfig-rk3568-evb1-ddr4-v10-spi-nor-64M.mk
-7. BoardConfig-rk3568-evb1-ddr4-v10.mk
-8. BoardConfig-rk3568-nvr-spi-nand.mk
-9. BoardConfig-rk3568-nvr.mk
-10. BoardConfig-rk3568-uvc-evb1-ddr4-v10.mk
-11. BoardConfig-security-base.mk
-12. BoardConfig.mk
-Which would you like? [0]: 4
-switching to board: /home/ubuntu/100ask-RK3568-SDK/rk3568_4.19_v1.3.2/device/rockchip/rk356x/BoardConfig-rk3568-100ask-ddr4.mk
+1. rockchip_defconfig
+2. 100ask_rk3568_defconfig
+3. rockchip_rk3566_evb2_lp4x_v10_32bit_defconfig
+4. rockchip_rk3566_evb2_lp4x_v10_defconfig
+5. rockchip_rk3568_evb1_ddr4_v10_32bit_defconfig
+6. rockchip_rk3568_evb1_ddr4_v10_defconfig
+7. rockchip_rk3568_uvc_evb1_ddr4_v10_defconfig
+Which would you like? [1]: 2
+Switching to defconfig: /home/ubuntu/rk3568_linux5.10_sdk/device/rockchip/.chip/100ask_rk3568_defconfig
+make: Entering directory '/home/ubuntu/rk3568_linux5.10_sdk/device/rockchip/common'
+#
+# configuration written to /home/ubuntu/rk3568_linux5.10_sdk/output/.config
+#
+make: Leaving directory '/home/ubuntu/rk3568_linux5.10_sdk/device/rockchip/common'
+Using prebuilt GCC toolchain: /home/ubuntu/rk3568_linux5.10_sdk/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-
 ~~~
 
 ## 2.编译
@@ -42,12 +39,12 @@ switching to board: /home/ubuntu/100ask-RK3568-SDK/rk3568_4.19_v1.3.2/device/roc
 在当前目录下，执行编译所有：
 
 ~~~bash
-./build.sh all
+./build.sh
 ~~~
 
 这个过程耗时较长，具体多久，根据电脑性能决定。
 
-![image-20241015115528178](images/image-20241015115528178.png)
+![image-20250114112632938](images/image-20250114112632938.png)
 
 在编译过程，可能你会遇到一下界面，
 
@@ -72,40 +69,24 @@ switching to board: /home/ubuntu/100ask-RK3568-SDK/rk3568_4.19_v1.3.2/device/roc
 
 ## 3.打包固件
 
-编译时长较久，等待编译完成后，执行以下指令，把所有镜像打包到 SDK 包 rockdev/ 下，
-
-~~~bash
-./build.sh firmware
-~~~
+编译时长较久，等待编译完成后，SDK会自动把用于烧录的镜像 update.img 打包到 output/update/Image/ 下，
 
 如下：
 
-![image-20241015115908770](images/image-20241015115908770.png)
-
-接着，把所有镜像打包成一个 update.img 固件，用于烧录到板子上，
-
 ~~~bash
-./build.sh updateimg
-~~~
-
-![image-20241015120144908](images/image-20241015120144908.png)
-
-> 注意：上面三步，其实相当于直接执行./build.sh
-
-编译打包完成后，固件保存在 SDK 包 rockdev/ 下，用于烧录的镜像是`update.img`。
-
-~~~bash
-ubuntu@ubuntu2004:~/100ask-RK3568-SDK/rk3568_4.19_v1.3.2$ ls -lh ./rockdev/
-total 536M
-lrwxrwxrwx 1 ubuntu ubuntu   18 Oct 14 23:56 boot.img -> ../kernel/boot.img
-lrwxrwxrwx 1 ubuntu ubuntu   41 Oct 14 23:56 MiniLoaderAll.bin -> ../u-boot/rk356x_spl_loader_v1.16.112.bin
-lrwxrwxrwx 1 ubuntu ubuntu   44 Oct 14 23:56 misc.img -> ../device/rockchip/rockimg/wipe_all-misc.img
--rw-rw-r-- 1 ubuntu ubuntu  17M Oct 14 23:56 oem.img
-lrwxrwxrwx 1 ubuntu ubuntu   53 Oct 14 23:56 parameter.txt -> ../device/rockchip/rk356x/parameter-buildroot-fit.txt
-lrwxrwxrwx 1 ubuntu ubuntu   64 Oct 14 23:56 recovery.img -> ../buildroot/output/rockchip_rk356x_recovery/images/recovery.img
-lrwxrwxrwx 1 ubuntu ubuntu   61 Oct 14 23:54 rootfs.ext4 -> ../buildroot/output/rockchip_rk3568_100ask/images/rootfs.ext2
-lrwxrwxrwx 1 ubuntu ubuntu   61 Oct 14 23:56 rootfs.img -> ../buildroot/output/rockchip_rk3568_100ask/images/rootfs.ext2
-lrwxrwxrwx 1 ubuntu ubuntu   19 Oct 14 23:56 uboot.img -> ../u-boot/uboot.img
--rw-rw-r-- 1 ubuntu ubuntu 524M Oct 14 23:56 update.img
--rw-rw-r-- 1 ubuntu ubuntu 4.3M Oct 14 23:56 userdata.img
+ubuntu@ubuntu2004:~/rk3568_linux5.10_sdk/output/update/Image$ ls -lah
+total 2.2G
+drwxrwxr-x 2 ubuntu ubuntu 4.0K Jan 13 05:53 .
+drwxrwxr-x 3 ubuntu ubuntu 4.0K Jan 13 05:53 ..
+lrwxrwxrwx 1 ubuntu ubuntu   24 Jan 13 05:53 boot.img -> ../../../kernel/boot.img
+lrwxrwxrwx 1 ubuntu ubuntu   47 Jan 13 05:53 MiniLoaderAll.bin -> ../../../u-boot/rk356x_spl_loader_v1.16.112.bin
+lrwxrwxrwx 1 ubuntu ubuntu   56 Jan 13 05:53 misc.img -> ../../../device/rockchip/common/images/wipe_all-misc.img
+lrwxrwxrwx 1 ubuntu ubuntu   22 Jan 13 05:53 oem.img -> ../../firmware/oem.img
+-rw-rw-r-- 1 ubuntu ubuntu  203 Jan 13 05:53 package-file
+lrwxrwxrwx 1 ubuntu ubuntu   73 Jan 13 05:53 parameter.txt -> ../../../device/rockchip/.chips/rk3566_rk3568/parameter-buildroot-fit.txt
+lrwxrwxrwx 1 ubuntu ubuntu   67 Jan 13 05:53 rootfs.img -> ../../../buildroot/output/rockchip_rk3568_100ask/images/rootfs.ext2
+lrwxrwxrwx 1 ubuntu ubuntu   25 Jan 13 05:53 uboot.img -> ../../../u-boot/uboot.img
+-rw-rw-r-- 1 ubuntu ubuntu 1.1G Jan 13 05:53 update.img
+-rw-rw-r-- 1 ubuntu ubuntu 1.1G Jan 13 05:53 update.raw.img
+lrwxrwxrwx 1 ubuntu ubuntu   27 Jan 13 05:53 userdata.img -> ../../firmware/userdata.img
 ~~~

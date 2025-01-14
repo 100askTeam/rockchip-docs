@@ -7,7 +7,7 @@ sidebar_position: 2
 >
 > 内存：8GB
 
-本章节将讲解如何搭建开发环境，编译 rk3568 Linux SDK资源包。SDK包含了开发RK3568平台所需的各种软件组件、源代码、工具、库、文档以及示例代码等。这些资源旨在帮助开发人员基于rk3568芯片进行高效的软件开发、系统定制以及应用程序开发。下面将进行的操作皆在 Ubuntu 上执行。
+本章节将讲解如何搭建开发环境，编译 rk3568 Linux SDK资源包。SDK包含了开发rk3568平台所需的各种软件组件、源代码、工具、库、文档以及示例代码等。这些资源旨在帮助开发人员基于rk3568芯片进行高效的软件开发、系统定制以及应用程序开发。下面将进行的操作皆在 Ubuntu 上执行。（默认使用内核版本为5.10的SDK）
 
 ## 安装依赖
 
@@ -64,22 +64,19 @@ SDK稍微有点大，需要等待一会时间。
 
 ~~~bash
 .
-├── app														#存放上层应用 app，包括 Qt 应用程序，以及其它的 C/C++应用程序。
-├── br.log														
-├── buildroot												#基于 buildroot 开发的根文件系统。
-├── build.sh -> device/rockchip/common/build.sh
+├── app														#存放上层应用 app，包括 Qt 应用程序，以及其它的 C/C++应用程序。													
+├── buildroot												#基于 Buildroot（2021）开发的根⽂件系统
+├── build.sh -> device/rockchip/common/scripts/build.sh
 ├── device
 ├── envsetup.sh -> buildroot/build/envsetup.sh
 ├── external												#存放所需的第三方库，包括音频、视频、网络、recovery 等。
-├── IMAGE
-├── kernel													#Linux 4.19 版本内核源码。
-├── linux
-├── Makefile -> buildroot/build/Makefile
-├── mkfirmware.sh -> device/rockchip/common/mkfirmware.sh	
+├── kernel													#Linux 5.10 版本内核源码。
+├── Makefile -> device/rockchip/common/Makefile
+├── output                                                  #存放编译输出固件
 ├── prebuilts												#存放交叉编译工具链。
 ├── rkbin													#存放 Rockchip 相关的 Binary 和工具。
-├── rkflash.sh -> device/rockchip/common/rkflash.sh
-├── rockdev													#存放编译输出固件，编译 SDK 后才会生成该文件夹。
+├── rkflash.sh -> device/rockchip/common/scripts/rkflash.sh
+├── rockdev -> output/firmware								#编译SDK后才会出现		
 ├── tools													#存放常用的工具，包括镜像烧录工具、SD 卡升级启动制作工具、批量烧录工具等
 └── u-boot													#基于 v2017.09 版本进行开发的 uboot 源码。
 ~~~

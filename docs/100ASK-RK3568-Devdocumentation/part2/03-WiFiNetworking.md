@@ -101,7 +101,7 @@ vi /etc/wpa_supplicant.conf
 - **ssid** : 无线网络设备名。（需要根据实际情况填写）
 - **psk** ：无线网络设备的连接密码。（需要根据实际情况填写）
 
-退出完成后，执行以下指令，创建一个socket通信的目录，命名需要和上面配置文件里`ctrl_interface`的路径一样。
+退出完成后，执行以下指令，创建一个socket通信的目录。
 
 ~~~bash
 mkdir -p /var/log/wpa_supplicant
