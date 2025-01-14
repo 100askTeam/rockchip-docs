@@ -64,21 +64,21 @@ SDK稍微有点大，需要等待一会时间。
 
 ~~~bash
 .
-├── app														#存放上层应用 app，包括 Qt 应用程序，以及其它的 C/C++应用程序。													
-├── buildroot												#基于 Buildroot（2021）开发的根⽂件系统
+├── app         #存放上层应用 app，包括 Qt 应用程序，以及其它的 C/C++应用程序。													
+├── buildroot   #基于 Buildroot（2021）开发的根⽂件系统
 ├── build.sh -> device/rockchip/common/scripts/build.sh
 ├── device
 ├── envsetup.sh -> buildroot/build/envsetup.sh
-├── external												#存放所需的第三方库，包括音频、视频、网络、recovery 等。
-├── kernel													#Linux 5.10 版本内核源码。
+├── external    #存放所需的第三方库，包括音频、视频、网络、recovery 等。
+├── kernel      #Linux 5.10 版本内核源码。
 ├── Makefile -> device/rockchip/common/Makefile
-├── output                                                  #存放编译输出固件
-├── prebuilts												#存放交叉编译工具链。
-├── rkbin													#存放 Rockchip 相关的 Binary 和工具。
+├── output      #存放编译输出固件
+├── prebuilts   #存放交叉编译工具链。
+├── rkbin       #存放 Rockchip 相关的 Binary 和工具。
 ├── rkflash.sh -> device/rockchip/common/scripts/rkflash.sh
-├── rockdev -> output/firmware								#编译SDK后才会出现		
-├── tools													#存放常用的工具，包括镜像烧录工具、SD 卡升级启动制作工具、批量烧录工具等
-└── u-boot													#基于 v2017.09 版本进行开发的 uboot 源码。
+├── rockdev -> output/firmware  #编译SDK后才会出现		
+├── tools       #存放常用的工具，包括镜像烧录工具、SD 卡升级启动制作工具、批量烧录工具等
+└── u-boot      #基于 v2017.09 版本进行开发的 uboot 源码。
 ~~~
 
 ## 获取补丁包
