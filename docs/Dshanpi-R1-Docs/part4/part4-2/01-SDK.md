@@ -192,7 +192,7 @@ make savedefconfig
 
 RK的SDK源码，有提供一个编译脚本 `./build.sh`，我们可以根据脚本使用指令来查看如何编译buildroot。
 
-进入SDK源码根目录，执行以下指令，编译kernel：
+进入SDK源码根目录，执行以下指令，编译buildroot：
 
 ~~~bash
 ./build.sh buildroot
