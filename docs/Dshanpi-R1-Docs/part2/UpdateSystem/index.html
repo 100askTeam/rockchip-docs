@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">更新系统固件 | 东山Π</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://rockchip.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://rockchip.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://rockchip.100ask.net/docs/Dshanpi-R1-Docs/part2/UpdateSystem"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="更新系统固件 | 东山Π"><meta data-rh="true" name="description" content="烧写固件至EMMC"><meta data-rh="true" property="og:description" content="烧写固件至EMMC"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://rockchip.100ask.net/docs/Dshanpi-R1-Docs/part2/UpdateSystem"><link data-rh="true" rel="alternate" href="https://rockchip.100ask.net/docs/Dshanpi-R1-Docs/part2/UpdateSystem" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://rockchip.100ask.net/en/docs/Dshanpi-R1-Docs/part2/UpdateSystem" hreflang="en"><link data-rh="true" rel="alternate" href="https://rockchip.100ask.net/docs/Dshanpi-R1-Docs/part2/UpdateSystem" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.e3ab61ce.css">
-<script src="/assets/js/runtime~main.8c88ed7f.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6eaae240.js" defer="defer"></script>
 <script src="/assets/js/main.a3389187.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -33,13 +33,13 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="连接开发板">连接开发板<a href="#连接开发板" class="hash-link" aria-label="连接开发板的直接链接" title="连接开发板的直接链接">​</a></h3>
 <p>烧录系统前，需要连接好开发板。如果不清楚如何连接开发板登录串口终端，可以先阅读《启动开发板》章节。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="运行软件烧写">运行软件烧写<a href="#运行软件烧写" class="hash-link" aria-label="运行软件烧写的直接链接" title="运行软件烧写的直接链接">​</a></h3>
-<p>将下载下来的文件 RKDevTool_Release_v2.92 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下。文件解压之后，得到一个名为 RKDevTool_Release_v2.92 的文件夹，有以下文件，双击点击 <code>RKDevTool.exe</code>，打开烧录工具：</p>
+<p>将下载下来的文件 RKDevTool_Release_v2.92 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下，该镜像目前支持开发板所有文档描述的功能，对应md5值是<code>2e44379638a60c2691df65a354d5ff86</code>。文件解压之后，得到一个名为 RKDevTool_Release_v2.92 的文件夹，有以下文件，双击点击 <code>RKDevTool.exe</code>，打开烧录工具：</p>
 <p><img loading="lazy" alt="image-20241106115529194" src="/assets/images/image-20241106115529194-a16517df0858b2711dbf80ab28038aca.png" width="825" height="513" class="img_ev3q"></p>
 <p>打开之后，点击 <strong>①升级固件</strong>，然后点击 <strong>②固件</strong> 找到下载解压的镜像文件<code>DshanPI-R1-RK3568-DefaultSystem_V1.img</code>(这个镜像也可以在SDK生成)，</p>
 <p><img loading="lazy" alt="image-20241106162140572" src="/assets/images/image-20241106162140572-bbb9c394ca35d06ec69fc327877785cc.png" width="970" height="456" class="img_ev3q"></p>
 <p>选择好镜像之后，接下来需要<strong>长按</strong>物理按键<code>BOOT</code>，不要松开，然后点击物理按键<code>RESET</code>，这个时候可以看到设备管理器会出现以下设备：</p>
 <p><img loading="lazy" alt="image-20241106162849960" src="/assets/images/image-20241106162849960-3ce07208dfe3610659c61ebf0e087fc2.png" width="972" height="545" class="img_ev3q"></p>
-<p>证明烧录驱  动安装成功，同样烧录软件会出现以下标识。</p>
+<p>证明烧录驱动安装成功，同样烧录软件会出现以下标识。</p>
 <p><img loading="lazy" alt="image-20241106162940588" src="/assets/images/image-20241106162940588-0a0ae3ce9653ff821552033613a0a769.png" width="970" height="456" class="img_ev3q"></p>
 <p>出现这个标识之后，就可以松开物理按键<code>BOOT</code>了，然后点击升级，等待升级完成。</p>
 <p><img loading="lazy" alt="image-20241106163155046" src="/assets/images/image-20241106163155046-0736e86c98500e564faa6387921575ca.png" width="970" height="456" class="img_ev3q"></p>
@@ -59,12 +59,12 @@
 <p><strong>软件：</strong></p>
 <ul>
 <li>SD卡烧录工具 <a href="/docs/Rockchip-SBC/part1/part1-2/ProcessorParameters">SDDiskTool_v1.7.zip</a></li>
-<li>镜像 <a href="https://dl.100ask.net/Hardware/MPU/RK3568-DshanPI-R1/Images/DshanPI-R1-RK3568-DefaultSystem_V1.7z" target="_blank" rel="noopener noreferrer">DshanPI-R1-RK3568-DefaultSystem_V1.7z</a></li>
+<li>镜  像 <a href="https://dl.100ask.net/Hardware/MPU/RK3568-DshanPI-R1/Images/DshanPI-R1-RK3568-DefaultSystem_V1.7z" target="_blank" rel="noopener noreferrer">DshanPI-R1-RK3568-DefaultSystem_V1.7z</a></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="连接开发板-1">连接开发板<a href="#连接开发板-1" class="hash-link" aria-label="连接开发板的直接链接" title="连接开发板的直接链接">​</a></h3>
 <p>烧录系统前，需要连接好开发板。如果不清楚如何连接开发板登录串口终端，可以先阅读《启动开发板》章节。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="运行软件烧写-1">运行软件烧写<a href="#运行软件烧写-1" class="hash-link" aria-label="运行软件烧写的直接链接" title="运行软件烧写的直接链接">​</a></h3>
-<p>将下载下来的文件<code>SDDiskTool_v1.7.zip</code> 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下。文件解压之后，得到一个名为 SDDiskTool_v1.7 的文件夹，有以下文件，双击点击 <code>SD_Firmware_Tool.exe</code>，打开sd卡烧录工具：</p>
+<p>将下载下来的文件<code>SDDiskTool_v1.7.zip</code> 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下，该镜像目前支持开发板所有文档描述的功能，对应md5值是md5值<code>2e44379638a60c2691df65a354d5ff86</code>。文件解压之后，得到一个名为 SDDiskTool_v1.7 的文件夹，有以下文件，双击点击 <code>SD_Firmware_Tool.exe</code>，打开sd卡烧录工具：</p>
 <p><img loading="lazy" alt="image-20241106170206235" src="/assets/images/image-20241106170206235-524a22f3386a00f8117c20d1cde9fc43.png" width="825" height="513" class="img_ev3q"></p>
 <p>打开之后，TF卡接入读卡器，读卡器插入电脑usb口，可以看到sd卡烧录软件能识别出来，烧录之前先点击<strong>恢复磁盘</strong>，进行格式化。</p>
 <p><img loading="lazy" alt="image-20241106170322672" src="/assets/images/image-20241106170322672-a57c29ef1f0c3aedfe40f8456ac2cdb7.png" width="482" height="411" class="img_ev3q"></p>
