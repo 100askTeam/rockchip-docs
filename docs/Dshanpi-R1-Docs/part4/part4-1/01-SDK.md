@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# SDK编译指南
+# SDK开发指南
 
 本章节将讲解如何在RK的SDK中进行 u-boot、kernel 和 buildroot单独编译与配置。默认已选择过板级配置文件，如果没有，请先阅读《开发环境搭建》章节，以下操作皆在ubuntu执行。
 

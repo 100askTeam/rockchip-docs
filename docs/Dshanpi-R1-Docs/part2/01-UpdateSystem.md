@@ -15,9 +15,9 @@ sidebar_position: 1
 
 **软件：**
 
-- 烧录工具 RKDevTool_Release_v2.92
-- 烧录驱动 DriverInstall
-- 镜像 update.img
+- 烧录工具 [RKDevTool_Release_v2.92.zip](/docs/Rockchip-SBC/part1/part1-2/ProcessorParameters)
+- 烧录驱动 [DriverAssitant_v5.1.1.zip](/docs/Rockchip-SBC/part1/part1-2/ProcessorParameters)
+- 镜像 [DshanPI-R1-RK3568-DefaultSystem_V1.7z](https://dl.100ask.net/Hardware/MPU/RK3568-DshanPI-R1/Images/DshanPI-R1-RK3568-DefaultSystem_V1.7z)
 
 ### 安装烧录工具 
 
@@ -39,11 +39,11 @@ sidebar_position: 1
 
 ### 运行软件烧写
 
-将下载下来的文件 RKDevTool_Release_v2.92 解压，同时也将 update.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下。文件解压之后，得到一个名为 RKDevTool_Release_v2.92 的文件夹，有以下文件，双击点击 `RKDevTool.exe`，打开烧录工具：
+将下载下来的文件 RKDevTool_Release_v2.92 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下。文件解压之后，得到一个名为 RKDevTool_Release_v2.92 的文件夹，有以下文件，双击点击 `RKDevTool.exe`，打开烧录工具：
 
 ![image-20241106115529194](images/image-20241106115529194.png)
 
-打开之后，点击 **①升级固件**，然后点击 **②固件** 找到下载解压的镜像文件`update.img`(这个镜像也可以在SDK生成)，
+打开之后，点击 **①升级固件**，然后点击 **②固件** 找到下载解压的镜像文件`DshanPI-R1-RK3568-DefaultSystem_V1.img`(这个镜像也可以在SDK生成)，
 
 ![image-20241106162140572](images/image-20241106162140572.png)
 
@@ -1501,8 +1501,8 @@ root@RK356X:/#
 
 **软件：**
 
-- sd卡烧录工具 SDDiskTool_v1.7.zip
-- 镜像 update.img
+- SD卡烧录工具 [SDDiskTool_v1.7.zip](/docs/Rockchip-SBC/part1/part1-2/ProcessorParameters)
+- 镜像 [DshanPI-R1-RK3568-DefaultSystem_V1.7z](https://dl.100ask.net/Hardware/MPU/RK3568-DshanPI-R1/Images/DshanPI-R1-RK3568-DefaultSystem_V1.7z)
 
 ### 连接开发板
 
@@ -1510,7 +1510,7 @@ root@RK356X:/#
 
 ### 运行软件烧写
 
-将下载下来的文件`SDDiskTool_v1.7.zip` 解压，同时也将 update.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下。文件解压之后，得到一个名为 SDDiskTool_v1.7 的文件夹，有以下文件，双击点击 `SD_Firmware_Tool.exe`，打开sd卡烧录工具：
+将下载下来的文件`SDDiskTool_v1.7.zip` 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下。文件解压之后，得到一个名为 SDDiskTool_v1.7 的文件夹，有以下文件，双击点击 `SD_Firmware_Tool.exe`，打开sd卡烧录工具：
 
 ![image-20241106170206235](images/image-20241106170206235.png)
 
@@ -1518,7 +1518,7 @@ root@RK356X:/#
 
 ![image-20241106170322672](images/image-20241106170322672.png)
 
-恢复磁盘成功后，选择功能模式为**SD启动**，然后点击**选择固件**，找到解压好的镜像文件`update.img`，最后点击**开始创建**，等待烧写完成。
+恢复磁盘成功后，选择功能模式为**SD启动**，然后点击**选择固件**，找到解压好的镜像文件`DshanPI-R1-RK3568-DefaultSystem_V1.img`，最后点击**开始创建**，等待烧写完成。
 
 ![image-20241106170957788](images/image-20241106170957788.png)
 
