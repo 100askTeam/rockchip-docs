@@ -39,7 +39,7 @@ sidebar_position: 1
 
 ### 运行软件烧写
 
-将下载下来的文件 RKDevTool_Release_v2.92 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下。文件解压之后，得到一个名为 RKDevTool_Release_v2.92 的文件夹，有以下文件，双击点击 `RKDevTool.exe`，打开烧录工具：
+将下载下来的文件 RKDevTool_Release_v2.92 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下，该镜像目前支持开发板所有文档描述的功能，对应md5值是`2e44379638a60c2691df65a354d5ff86`。文件解压之后，得到一个名为 RKDevTool_Release_v2.92 的文件夹，有以下文件，双击点击 `RKDevTool.exe`，打开烧录工具：
 
 ![image-20241106115529194](images/image-20241106115529194.png)
 
@@ -1510,7 +1510,7 @@ root@RK356X:/#
 
 ### 运行软件烧写
 
-将下载下来的文件`SDDiskTool_v1.7.zip` 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下。文件解压之后，得到一个名为 SDDiskTool_v1.7 的文件夹，有以下文件，双击点击 `SD_Firmware_Tool.exe`，打开sd卡烧录工具：
+将下载下来的文件`SDDiskTool_v1.7.zip` 解压，同时也将 DshanPI-R1-RK3568-DefaultSystem_V1.img 镜像下载下来，也进行解压，保存在一个能找得到的路径下，该镜像目前支持开发板所有文档描述的功能，对应md5值是md5值`2e44379638a60c2691df65a354d5ff86`。文件解压之后，得到一个名为 SDDiskTool_v1.7 的文件夹，有以下文件，双击点击 `SD_Firmware_Tool.exe`，打开sd卡烧录工具：
 
 ![image-20241106170206235](images/image-20241106170206235.png)
 
